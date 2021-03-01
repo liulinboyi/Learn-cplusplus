@@ -7,3 +7,5 @@ add_executable(cplus
         hello.cpp)
 add_executable(cplus1
         switch.cpp)
+add_executable(cplus2
+        array.cpp)

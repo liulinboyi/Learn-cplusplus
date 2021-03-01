@@ -166,6 +166,75 @@ true ? 1 : 0;
  
 ```
 
+## 数组
+
+```c++
+// 数组定义
+int array[5];
+char words[6][6];
+
+// 数组初始化
+int array[5] = {1,2,3,4,5};
+char words[6][6] = {
+    {'o','n','e'},
+    {'t','w','o'},
+    {'t','h','r','e','e'}
+};
+
+// 数组访问
+array[0] = 6;
+int x = array[4];
+
+words[3][0] = 'f';
+
+// C语言风格字符串
+char s1[] = "Hello";
+char s2[] = {'H','e','l','l','o',0}; // 需要加一个0字符，0表示字符串结束
+
+s1[1] = 'a';
+
+std::cout << s1 << std::endl;
+
+
+```
+## 循环语句
+
+```c++
+// while
+int n = 1;
+while(n < 100) {
+    std::cout << n << std::endl;
+    n *= 2;
+}
+
+// do while
+int n = 1;
+do {
+    std::cout << n << std::endl;
+    n *= 2;
+} while(n < 100)
+    
+// for
+for(int n = 1;n < 100;n *= 2) {
+    std::cout << n << std::endl;
+}
+
+// continue
+for(int n = 1;n < 100;n++) {
+    if(n == 50) {
+        continue; // n等于50时，不执行下面的语句，快进到下一步，进入下一次循环
+    }
+    std::cout << n << std::endl;
+}
+
+// break
+for(int n = 1;n < 100;n++) {
+    if(n == 50) {
+        break; // n等于50时，结束当前循环，退出
+    }
+    std::cout << n << std::endl;
+}
+```
 
 
 
