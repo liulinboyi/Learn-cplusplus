@@ -8,4 +8,4 @@ add_executable(cplus
 add_executable(cplus1
         switch.cpp)
 add_executable(cplus2
-        array.cpp)
+        array.cpp Statement.cpp)

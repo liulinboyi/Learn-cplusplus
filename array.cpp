@@ -4,22 +4,30 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <cmath>
+#include <cstdint>
+#include <climits>
+
+extern std::string name; // 声明，使用外部变量，告诉编译器，有个变量，不是我定义的，但是我想用，先定义后使用
 
 int main() {
+    using namespace std;
     char array[] = "Hello";
     array[1] = 'a';
+    int32_t i; // 类型别名
 
     int size = sizeof(array)/*查看占用内存大小 array5个字符但是大小是6，最后又一个0，表示字符串结束*/;
 
-    std::string c = "sizeof array: ";
+    cout << name << ends;
+    string c = "sizeof array: ";
 
-    std::stringstream ss;
+    stringstream ss;
 
     ss << c << size;
 
-    std::string res = ss.str();
+    string res = ss.str();
 
-    std::cout << res << std::endl;
+    cout << res << endl;
 
-    std::cout << array << std::endl;
+    cout << array << endl;
 }
