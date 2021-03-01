@@ -7,7 +7,11 @@
 int main() {
     using namespace std;
 
-    const char *tips = "请输入:";
+    // std（标准库）cout 输出
+    std::cout << "hello! ";
+    std::cout << "the program is start!" << std::endl; // 换行
+
+    const char *tips = "请输入(please input):";
 
     cout << tips << ends;
 
