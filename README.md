@@ -43,5 +43,79 @@ int y = x + 1;
 const int a = 3;
 ```
 
+## 选择语句
+
+```c++
+// 关系运算法:
+// < | <= | > | >= | == | !=
+
+// if条件语句
+int a = 3;
+if (a > 2) {
+    std::cout << "a > 2" << std::endl;
+}
+
+if (a != 5) {
+    std::cout<< "a != 5" << std::endl;
+}
+
+// else
+
+if (a < 2) {
+    std::cout << "a < 2" << std::endl;
+} else {
+    std::cout << "a >= 2" << std::endl;
+}
+
+// else if
+
+if (a < 2) {
+    std::cout << "a < 2" << std::endl;
+} else if (a > 2) {
+    std::cout << "a > 2" << std::endl;
+} else {
+    std::cout << "a == 2" << std::endl;
+}
+
+// 相当于:
+// 从 a < 2 分成了两个大分支，后面是一个小分支
+if (a < 2) {
+    std::cout << "a < 2" << std::endl;
+} else {
+    if (a > 2) {
+        std::cout << "a > 2" << std::endl;
+    } else {
+    s   td::cout << "a == 2" << std::endl;
+    }
+}
+
+
+// switch
+int a = 3;
+
+switch(a) {
+    case 1:
+        std::cout << "a is 1" << std::endl;
+        break;
+    case 2:
+        std::cout << "a is 1" << std::endl;
+        break;
+    default:
+        std::cout << "a is not 1 ant 2" << std::endl;
+        break;
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
