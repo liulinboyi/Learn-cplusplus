@@ -303,7 +303,15 @@ enum Gender {
     FEMALE,
 };
 ```
+## 函数重载
 
+```c++
+double power(double a, int n);
+double power(double a, double n);
+
+// 根据参数列表不同去找不同的参数
+
+```
 
 
 
