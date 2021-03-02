@@ -4,14 +4,14 @@ project(cplus)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(cplus
-        src/hello.cpp)
+        example/hello.cpp)
 add_executable(cplus1
-        src/switch.cpp src/calculate.cpp)
+        example/switch.cpp example/calculate.cpp)
 add_executable(cplus2
-        src/array.cpp src/Statement.cpp)
+        example/array.cpp example/Statement.cpp)
 add_executable(cplus3
-        src/Combination-type.cpp)
+        example/Combination-type.cpp)
 add_executable(cplus5
-        src/pointer.cpp)
+        example/pointer.cpp)
 add_executable(cplus6
-        src/class.cpp)
+        example/class.cpp)
