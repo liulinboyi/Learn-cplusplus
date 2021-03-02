@@ -15,3 +15,7 @@ add_executable(cplus5
         example/pointer.cpp)
 add_executable(cplus6
         example/class.cpp)
+add_executable(cplus7
+        example/share_ptr.cpp)
+add_executable(calculate
+        src/main.cpp)

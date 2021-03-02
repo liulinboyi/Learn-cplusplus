@@ -247,7 +247,7 @@ for(int n = 1;n < 100;n++) {
 
 ## 声明语句
 
-[变量声明代码](src/array.cpp#L11)
+[变量声明代码](example/array.cpp#L11)
 
 ```c++
 // 变量声明
@@ -312,12 +312,50 @@ double power(double a, double n);
 
 ```
 
-## [指针](./src/pointer.cpp)
+## [指针](example/pointer.cpp)
 
 ```c++
 
 
 ```
+
+## 表达式树
+
+```c++
+
+// 节点基类
+struct Node {
+    virtual double eval() const = 0;
+    
+};
+
+```
+
+
+## 内存管理
+
+```c++
+// std::share_ptr
+#include <memory>
+
+using namespace std;
+shared_ptr<int> p (new int(3));
+p = make_shared<int>(5);
+cout << "*p: " << *p << endl;
+
+{
+    shared_ptr<int> q(p);
+    cout << "*q:" << *q << endl;
+    cout << "p.use_count():" << p.use_count() << endl;
+}
+
+cout << "p.use_count():" << p.use_count() << endl;
+
+```
+
+
+
+
 
 
 
