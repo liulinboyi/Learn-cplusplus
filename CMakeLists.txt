@@ -13,3 +13,5 @@ add_executable(cplus3
         src/Combination-type.cpp)
 add_executable(cplus5
         src/pointer.cpp)
+add_executable(cplus6
+        src/class.cpp)
