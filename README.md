@@ -2,6 +2,16 @@
 
 ## Hello world!
 
+## Tips
+
+```c++
+// 这里使用endl而非\n，原因是：
+// 系统输出，并非实时输出，是赞一定量的字符，然后批量的输出，
+// 加endl就表示，遇到endl进行一次刷输出的操作，此时立即输出，不赞了，提高输出效率
+std::cout << "hello!" << std::endl;
+
+```
+
 ```c++
 // 流程： 预处理 => 编译器编译 => 链接器
 // 引入头文件 iostream 实现了输入输出功能
@@ -238,7 +248,7 @@ for(int n = 1;n < 100;n++) {
 
 ## 声明语句
 
-[变量声明代码](./array.cpp#L11)
+[变量声明代码](src/array.cpp#L11)
 
 ```c++
 // 变量声明
@@ -262,7 +272,37 @@ using uint_t = unsigned int; // c++ 11 之后新的写法
 
 
 ```
+## 组合类型
 
+```c++
+// 数组
+// 前面有
+
+// 结构体struct 可以包含多个类型的组合
+// 定义
+struct StudentInfo {
+    char name[20]; // 字符数组表示字符串
+    int age;
+    double score;
+};
+// 使用
+StudentInfo sz = {"张三", 24, 90};
+StudentInfo ls = {"李四"}; // 后面未赋值，则自动用0填充
+ls.age = 26;
+ls.score = 80;
+
+std::cout << "name: " << ls.name << "\t" << "age: " << ls.age << "\t" << "score: " << ls.score << std::endl;
+
+
+// 联合体union 可以容纳第一个类型，单任意时刻只包含其中一种
+
+// 枚举 表示类型的取值有，有限多种可能性
+
+enum Gender {
+    MALE,
+    FEMALE,
+};
+```
 
 
 

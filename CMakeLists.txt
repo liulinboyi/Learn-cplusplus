@@ -9,3 +9,5 @@ add_executable(cplus1
         src/switch.cpp src/calculate.cpp)
 add_executable(cplus2
         src/array.cpp src/Statement.cpp)
+add_executable(cplus3
+        src/Combination-type.cpp)
