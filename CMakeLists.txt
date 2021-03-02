@@ -11,3 +11,5 @@ add_executable(cplus2
         src/array.cpp src/Statement.cpp)
 add_executable(cplus3
         src/Combination-type.cpp)
+add_executable(cplus5
+        src/pointer.cpp)
