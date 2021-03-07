@@ -23,5 +23,9 @@ add_executable(cplus9
         src/evaluate1.cpp)
 add_executable(cplus10
         example/template.cpp)
+add_executable(cplus11
+        example/string.cpp)
+add_executable(cplus12
+        example/vector.cpp)
 add_executable(calculate
         src/main.cpp)
