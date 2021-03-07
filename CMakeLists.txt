@@ -27,5 +27,7 @@ add_executable(cplus11
         example/string.cpp)
 add_executable(cplus12
         example/vector.cpp)
+add_executable(cplus13
+        example/deque.cpp)
 add_executable(calculate
         src/main.cpp)
