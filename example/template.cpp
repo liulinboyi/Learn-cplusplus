@@ -7,7 +7,7 @@
 
 using namespace std;
 
-// 模板
+// 模板 类似于泛型
 template<typename T>
 // template<typename T=int> // 类型可以有默认值，有了默认值，模板实例化时可以不传类型
 // 结构体
@@ -16,6 +16,12 @@ struct Point {
     T x;
     T y;
 };
+
+// 函数模板
+template<typename T>
+T findMin(T a, T b) {
+    return a < b ? a : b;
+}
 
 struct pointer {
     // 成员函数模板
@@ -76,6 +82,15 @@ int main() {
     cout << "sizeof(Point<int>)" << endl;
     cout << sizeof(Point<double>) << endl;
     // Point<int> 和 Point<double>编译代码后是两个不同的类
+
+    cout << "-----------------" << endl;
+
+    int a = findMin<int>(10, 5);
+    cout << a << endl;
+    auto b = findMin<double>(1.2, 2.5);
+    cout << b << endl;
+    int c = findMin<int>(2.5, 6);
+    cout << c << endl;
 
     cout << "-----------------" << endl;
 
