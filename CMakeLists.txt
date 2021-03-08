@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 project(cplus)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(cplus
         example/hello.cpp)
@@ -29,5 +29,9 @@ add_executable(cplus12
         example/vector.cpp)
 add_executable(cplus13
         example/deque.cpp)
+add_executable(cplus15
+        example/hellowebAssembly.cpp)
+add_executable(cplus16
+        example/base64.cpp)
 add_executable(calculate
         src/main.cpp)

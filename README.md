@@ -15,13 +15,14 @@ std::cout << "hello!" << std::endl;
 ```c++
 // 流程： 预处理 => 编译器编译 => 链接器
 // 引入头文件 iostream 实现了输入输出功能
-#include <stdio.h>
+#include
+<stdio.h>
 
 // main函数
 int main() { // 入口函数，可以有参数，把外部文件传进来<返回值类型是int如果不写返回值，默认也返回0
-    printf("hello world!\n");
-    
-    return 0;
+printf("hello world!\n");
+
+return 0;
 }
 
 ```
@@ -60,60 +61,61 @@ const int a = 3;
 // if条件语句
 int a = 3;
 if (a > 2) {
-    std::cout << "a > 2" << std::endl;
+std::cout << "a > 2" << std::endl;
 }
 
 if (a != 5) {
-    std::cout<< "a != 5" << std::endl;
+std::cout<< "a != 5" << std::endl;
 }
 
 // else
 
 if (a < 2) {
-    std::cout << "a < 2" << std::endl;
+std::cout << "a < 2" << std::endl;
 } else {
-    std::cout << "a >= 2" << std::endl;
+std::cout << "a >= 2" << std::endl;
 }
 
 // else if
 
 if (a < 2) {
-    std::cout << "a < 2" << std::endl;
+std::cout << "a < 2" << std::endl;
 } else if (a > 2) {
-    std::cout << "a > 2" << std::endl;
+std::cout << "a > 2" << std::endl;
 } else {
-    std::cout << "a == 2" << std::endl;
+std::cout << "a == 2" << std::endl;
 }
 
 // 相当于:
 // 从 a < 2 分成了两个大分支，后面是一个小分支
 if (a < 2) {
-    std::cout << "a < 2" << std::endl;
+std::cout << "a < 2" << std::endl;
 } else {
-    if (a > 2) {
-        std::cout << "a > 2" << std::endl;
-    } else {
-        std::cout << "a == 2" << std::endl;
-    }
+if (a > 2) {
+std::cout << "a > 2" << std::endl;
+} else {
+std::cout << "a == 2" << std::endl;
+}
 }
 
 
 // switch
 int a = 3;
 
-switch(a) {
-    case 1:
-        std::cout << "a is 1" << std::endl;
-        break;
-    case 2:
-        std::cout << "a is 1" << std::endl;
-        break;
-    default:
-        std::cout << "a is not 1 ant 2" << std::endl;
-        break;
+switch (a) {
+case 1:
+std::cout << "a is 1" << std::endl;
+break;
+case 2:
+std::cout << "a is 1" << std::endl;
+break;
+default:
+std::cout << "a is not 1 ant 2" << std::endl;
+break;
 }
 
 ```
+
 ## 表达式
 
 ```c++
@@ -160,19 +162,19 @@ not true;
 true ? 1 : 0;
 
 // 逗号表达式
-1,2,3; // 通过逗号把任意数量表达式进行连接，保证从左到右依次计算，保证运算顺序，将最后一个表达式的结果，作为整个表达式的结果
+1, 2, 3; // 通过逗号把任意数量表达式进行连接，保证从左到右依次计算，保证运算顺序，将最后一个表达式的结果，作为整个表达式的结果
 
 // 函数调用表达式
- foo()
- 
- // 赋值表达式
- x = 3;
- x += 3;
- x -= 3;
- x *= 3;
- x /= 3;
- x %= 3;
- 
+foo()
+
+// 赋值表达式
+x = 3;
+x += 3;
+x -= 3;
+x *= 3;
+x /= 3;
+x %= 3;
+
 ```
 
 ## 数组
@@ -183,11 +185,17 @@ int array[5];
 char words[6][6];
 
 // 数组初始化
-int array[5] = {1,2,3,4,5};
+int array[5] = { 1, 2, 3, 4, 5 };
 char words[6][6] = {
-    {'o','n','e'},
-    {'t','w','o'},
-    {'t','h','r','e','e'}
+{
+'o', 'n', 'e'
+},
+{
+'t', 'w', 'o'
+},
+{
+'t', 'h', 'r', 'e', 'e'
+}
 };
 
 // 数组访问
@@ -198,7 +206,7 @@ words[3][0] = 'f';
 
 // C语言风格字符串
 char s1[] = "Hello";
-char s2[] = {'H','e','l','l','o',0}; // 需要加一个0字符，0表示字符串结束
+char s2[] = { 'H', 'e', 'l', 'l', 'o', 0 }; // 需要加一个0字符，0表示字符串结束
 
 s1[1] = 'a';
 
@@ -206,42 +214,43 @@ std::cout << s1 << std::endl;
 
 
 ```
+
 ## 循环语句
 
 ```c++
 // while
 int n = 1;
-while(n < 100) {
-    std::cout << n << std::endl;
-    n *= 2;
+while (n < 100) {
+std::cout << n << std::endl;
+n *= 2;
 }
 
 // do while
 int n = 1;
 do {
-    std::cout << n << std::endl;
-    n *= 2;
-} while(n < 100)
-    
+std::cout << n << std::endl;
+n *= 2;
+} while (n < 100)
+
 // for
-for(int n = 1;n < 100;n *= 2) {
-    std::cout << n << std::endl;
+for (int n = 1;n < 100;n *= 2) {
+std::cout << n << std::endl;
 }
 
 // continue
-for(int n = 1;n < 100;n++) {
-    if(n == 50) {
-        continue; // n等于50时，不执行下面的语句，快进到下一步，进入下一次循环
-    }
-    std::cout << n << std::endl;
+for (int n = 1;n < 100;n++) {
+if (n == 50) {
+continue; // n等于50时，不执行下面的语句，快进到下一步，进入下一次循环
+}
+std::cout << n << std::endl;
 }
 
 // break
-for(int n = 1;n < 100;n++) {
-    if(n == 50) {
-        break; // n等于50时，结束当前循环，退出
-    }
-    std::cout << n << std::endl;
+for (int n = 1;n < 100;n++) {
+if (n == 50) {
+break; // n等于50时，结束当前循环，退出
+}
+std::cout << n << std::endl;
 }
 ```
 
@@ -271,6 +280,7 @@ using uint_t = unsigned int; // c++ 11 之后新的写法
 
 
 ```
+
 ## 组合类型
 
 ```c++
@@ -280,13 +290,13 @@ using uint_t = unsigned int; // c++ 11 之后新的写法
 // 结构体struct 可以包含多个类型的组合
 // 定义
 struct StudentInfo {
-    char name[20]; // 字符数组表示字符串
-    int age;
-    double score;
+char name[20]; // 字符数组表示字符串
+int age;
+double score;
 };
 // 使用
-StudentInfo sz = {"张三", 24, 90};
-StudentInfo ls = {"李四"}; // 后面未赋值，则自动用0填充
+StudentInfo sz = { "张三", 24, 90 };
+StudentInfo ls = { "李四" }; // 后面未赋值，则自动用0填充
 ls.age = 26;
 ls.score = 80;
 
@@ -298,10 +308,11 @@ std::cout << "name: " << ls.name << "\t" << "age: " << ls.age << "\t" << "score:
 // 枚举 表示类型的取值有，有限多种可能性
 
 enum Gender {
-    MALE,
-    FEMALE,
+MALE,
+FEMALE,
 };
 ```
+
 ## 函数重载
 
 ```c++
@@ -325,18 +336,18 @@ double power(double a, double n);
 
 // 节点基类
 struct Node {
-    virtual double eval() const = 0;
-    
+virtual double eval() const = 0;
+
 };
 
 ```
-
 
 ## 内存管理
 
 ```c++
 // std::share_ptr
-#include <memory>
+#include
+<memory>
 
 using namespace std;
 shared_ptr<int> p (new int(3));
@@ -344,17 +355,37 @@ p = make_shared<int>(5);
 cout << "*p: " << *p << endl;
 
 {
-    shared_ptr<int> q(p);
-    cout << "*q:" << *q << endl;
-    cout << "p.use_count():" << p.use_count() << endl;
+shared_ptr<int> q(p);
+cout << "*q:" << *q << endl;
+cout << "p.use_count():" << p.use_count() << endl;
 }
 
 cout << "p.use_count():" << p.use_count() << endl;
 
 ```
 
+## 模板库的使用
 
+```c++
+// 顺序容器
 
+// 字符串 C语言中字符串是一个字符数组
+string()
+string(n, c)
+string(str)
+string(c_str, n)
+string(begin, end)
+
+```
+
+## 列表
+
+```c++
+// 是由链表实现的
+// 没有at方法
+// 自身有sort方法
+
+```
 
 
 
